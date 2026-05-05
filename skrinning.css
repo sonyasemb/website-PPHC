@@ -1,0 +1,134 @@
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background: #ea99d4;
+    padding: 40px;
+}
+
+.container {
+    width: 700px;
+    margin: auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.pertanyaan {
+    margin-bottom: 20px;
+}
+
+.aksi-submit {
+    margin-top: 28px;
+    text-align: center;
+}
+
+.btn-hasil-skrinning {
+    background: #08327b;
+    color: #fff;
+    border: none;
+    border-radius: 999px;
+    padding: 14px 34px;
+    font: 600 16px/1 "Poppins", Arial, sans-serif;
+    letter-spacing: 0.2px;
+    box-shadow: 0 8px 20px rgba(47, 95, 179, 0.25);
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, color 0.25s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-hasil-skrinning:hover {
+    color: #f363eb;
+}
+
+.btn-hasil-skrinning:active {
+    transform: scale(1.03);
+    box-shadow: 0 6px 14px rgba(47, 95, 179, 0.3);
+}
+
+.btn-hasil-skrinning:focus-visible {
+    outline: 3px solid rgba(243, 99, 235, 0.45);
+    outline-offset: 3px;
+}
+
+.pesan-error {
+    color: #c0392b;
+    text-align: center;
+}
+
+.pesan-error-jarak {
+    margin-bottom: 20px;
+}
+
+body.hasil-srq {
+    text-align: center;
+    padding: 50px;
+}
+
+.hasil-card {
+    max-width: 860px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 20px;
+    padding: 28px 26px;
+    box-shadow: 0 10px 28px rgba(17, 24, 39, 0.12);
+}
+
+.hasil-skor {
+    font-size: 18px;
+    font-weight: 600;
+    color: #08327b;
+    margin-bottom: 12px;
+}
+
+.hasil-judul {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 14px;
+}
+
+.hasil-pesan {
+    max-width: 720px;
+    margin: 0 auto;
+    color: #334155;
+    font-size: 17px;
+    line-height: 1.7;
+    white-space: normal;
+}
+
+.aksi-hasil {
+    margin-top: 28px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 576px) {
+    .hasil-card {
+        padding: 22px 16px;
+        border-radius: 16px;
+    }
+
+    .hasil-judul {
+        font-size: 23px;
+    }
+
+    .hasil-pesan {
+        font-size: 15px;
+    }
+
+    .btn-hasil-skrinning {
+        width: min(100%, 280px);
+        padding: 14px 22px;
+        font-size: 15px;
+    }
+}

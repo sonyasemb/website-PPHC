@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+   /* gradient pastel soft */
+  background: #ffffff 100%;
+  padding-top: 90px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  color: #08327b;
+}
+
+.nav-brand img {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.page-card {
+  border: 1px solid #c4d7ff;
+  color: #08327b;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(17, 24, 39, 0.08);
+  background:  #eef5ff;
+}
+
+.calendar-box {
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 20px;
+  background: rgb(255, 245, 251);
+  min-height: 250px;
+}
+
+td {
+  cursor: pointer;
+}
+
+td.active-date {
+  background: #08327b !important;
+  color: white !important;
+  border-radius: 50%;
+  font-weight: bold;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.time-slot {
+  border: 1px solid #08327b;
+  padding: 8px 16px;
+  border-radius: 999px;
+  display: inline-block;
+  margin: 6px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.time-slot:hover {
+  background: #08327b;
+  color: white;
+}
+
+.time-slot.active {
+  background: #08327b;
+  color: white;
+}
+
+#summary-box {
+  display: none;
+  padding: 15px;
+  border-radius: 12px;
+  background: #eef5ff;
+  border: 1px solid #c7d2fe;
+}
+
+.detail-list {
+  margin-bottom: 16px;
+}
+
+.detail-row {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.detail-label {
+  font-weight: 700;
+  color: #374151;
+}
+
+.detail-value {
+  color: #111827;
+}
+
+#lanjutBtn {
+  background: #08327b;
+  border-color: #08327b;
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 8px 20px rgba(234, 135, 149, 0.25);
+}
+
+#lanjutBtn:hover {
+  background: #08327b;
+  border-color: #08327b;
+  color: #f363eb;
+}
+
+.btn-nav-cta {
+  background: #111827;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 24px;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: .2s;
+}
+
+.btn-nav-cta:hover {
+  background: #f363eb;
+  color: #fff;
+  transform: translateY(-2px);
+}

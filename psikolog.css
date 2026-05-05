@@ -1,0 +1,942 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Compact desktop mode (mirip zoom browser 90%) */
+@media (min-width: 1200px) {
+    .sidebar {
+        width: 234px !important;
+        padding: 18px !important;
+    }
+
+    .content {
+        margin-left: 234px !important;
+        padding: 22px !important;
+    }
+
+    .stat-grid {
+        gap: 12px !important;
+    }
+
+    .stat-card,
+    .dashboard-hero,
+    .panel-card {
+        padding: 18px !important;
+    }
+
+    .table-card h2,
+    .table-card h3 {
+        font-size: 18px !important;
+        padding: 12px 14px !important;
+    }
+
+    .table-reservasi th {
+        font-size: 15px !important;
+        padding: 10px 11px !important;
+    }
+
+    .table-reservasi td {
+        font-size: 15px !important;
+        padding: 9px 11px !important;
+    }
+
+    .welcome-hero h2 {
+        font-size: 36px !important;
+    }
+
+    .welcome-hero p {
+        font-size: 24px !important;
+    }
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --staff-navy: #2d4662;
+    --staff-line: #d2dbe7;
+    --staff-text: #2c425c;
+    --staff-muted: #6f8196;
+    --pphc-blue: #08327b;
+}
+
+/* Psikolog Dashboard Styles (khusus psikolog.php) */
+.content .header {
+    background: transparent;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+    margin-bottom: 25px;
+}
+
+.content .header h2 {
+    color: var(--staff-navy);
+    margin: 0;
+    font-size: 24px;
+    letter-spacing: 0;
+}
+
+.dashboard-hero {
+    background: #ffffff;
+    border: 1px solid var(--staff-line);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin-bottom: 18px;
+}
+
+.dashboard-hero h2 {
+    font-size: 20px;
+    margin-bottom: 6px;
+}
+
+.dashboard-hero p {
+    color: #555;
+    font-size: 14px;
+}
+
+.welcome-hero {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin-top: -10px;
+    margin-bottom: 18px;
+}
+
+.welcome-hero h2 {
+    font-size: 40px;
+    margin-bottom: 8px;
+    color: #1b2f50;
+}
+
+.welcome-hero p {
+    font-size: 28px;
+    color: #2f4a73;
+}
+
+.stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+.stat-card {
+    background: #fff;
+    border: 1px solid var(--staff-line);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.stat-title {
+    font-size: 14px;
+    color: var(--staff-muted);
+    margin-bottom: 6px;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.stat-value {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    color: var(--staff-text);
+}
+
+.stat-sub {
+    font-size: 12px;
+    color: var(--staff-muted);
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 260px;
+    gap: 18px;
+    align-items: start;
+}
+
+.dashboard-grid.no-side-panel {
+    grid-template-columns: 1fr;
+}
+
+.panel-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.panel-card h4 {
+    margin-bottom: 10px;
+}
+
+.checklist {
+    list-style: none;
+    padding-left: 0;
+}
+
+.checklist li {
+    padding: 6px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.checklist li:last-child {
+    border-bottom: none;
+}
+
+/* Table khusus dashboard psikolog (samakan dengan admin) */
+.table-card {
+    background: #f7f9fc;
+    padding: 0;
+    margin-top: 25px;
+    border-radius: 10px;
+    border: 1px solid var(--staff-line);
+    overflow: hidden;
+    overflow-x: auto;
+}
+
+.table-card h2,
+.table-card h3 {
+    margin: 0 !important;
+    padding: 14px 16px;
+    font-size: 20px;
+    color: var(--staff-navy);
+    border-bottom: 1px solid var(--staff-line);
+}
+
+.table-reservasi {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 900px;
+    color: var(--staff-text);
+    font-family: 'Poppins', sans-serif;
+}
+
+.table-reservasi th,
+.table-reservasi td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #cfdae8;
+    text-align: left;
+    vertical-align: top;
+}
+
+.table-reservasi th {
+    background: var(--staff-navy);
+    color: #f5f9ff;
+    font-size: 17px;
+    font-weight: 700;
+    padding: 11px 12px;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.table-reservasi td {
+    font-size: 16px;
+}
+
+.table-reservasi tbody tr:nth-child(even) {
+    background: #edf2f8;
+}
+
+.table-reservasi tbody td[colspan] {
+    text-align: center;
+    color: var(--staff-muted);
+    padding: 16px 12px;
+}
+
+.status-pill {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: bold;
+    border: 1px solid transparent;
+}
+
+.status-scheduled {
+    background: #e6f4ea;
+    color: #2f6f3e;
+    border-color: #bfe3c7;
+}
+
+.status-canceled {
+    background: #fdecec;
+    color: #a23434;
+    border-color: #f2b9b9;
+}
+
+.btn-action,
+.btn-small {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    padding: 6px 10px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    white-space: nowrap;
+    text-decoration: none;
+    background: var(--pphc-blue);
+    color: #fff;
+    width: auto;
+}
+
+.btn-action:hover,
+.btn-small:hover {
+    background: #0a3a90;
+}
+
+.table-reservasi td:last-child {
+    white-space: normal;
+}
+
+.cell-action {
+    text-align: left;
+    min-width: 140px;
+}
+
+.action-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: flex-start;
+}
+
+.action-wrap form {
+    margin: 0;
+}
+
+.btn-view {
+    background: var(--pphc-blue);
+    color: #fff;
+}
+
+.btn-view:hover {
+    background: #0a3a90;
+}
+
+.btn-print {
+    background: var(--pphc-blue);
+    color: #fff;
+}
+
+.btn-print:hover {
+    background: #0a3a90;
+}
+
+.btn-cancel {
+    background: #e53935;
+    color: #fff;
+}
+
+.btn-cancel:hover {
+    background: #d32f2f;
+}
+
+.action-alert {
+    margin: 12px 0 6px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    border: 1px solid transparent;
+}
+
+.action-alert.success {
+    background: #e8f7ea;
+    border-color: #b9e1bf;
+    color: #256334;
+}
+
+.action-alert.error {
+    background: #fdecec;
+    border-color: #f2b9b9;
+    color: #a23434;
+}
+
+.row-highlight td {
+    background: #fff7d6;
+    transition: background-color 0.25s ease;
+    animation: rowHighlightPulse 1.6s ease-in-out 2;
+}
+
+@keyframes rowHighlightPulse {
+    0% {
+        background: #ffe89a;
+    }
+    100% {
+        background: #fff7d6;
+    }
+}
+
+@media (max-width: 768px) {
+    .content .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .content .header .user-box.user-menu {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Sidebar konsisten dengan admin */
+.sidebar {
+    overflow-y: auto;
+}
+
+.sidebar h3 {
+    font-size: 18px;
+    margin-bottom: 18px;
+    color: #08327b;
+}
+
+.sidebar a.menu-item,
+.sidebar a.menu-item:visited,
+.sidebar a.menu-item:active {
+    color: #08327b;
+    text-decoration: none;
+}
+
+.sidebar .menu-item {
+    color: #08327b;
+    margin: 10px 0;
+    padding: 8px 10px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sidebar .menu-item .icon img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    display: block;
+}
+
+.sidebar .menu-item span:not(.icon) {
+    color: #08327b;
+}
+
+.sidebar .menu-item:hover {
+    background: #f9b2f6;
+}
+
+.sidebar a.menu-item.active {
+    background: #f9b2f6;
+    color: #08327b;
+    font-weight: 600;
+}
+
+.menu-item:hover {
+    background: #f363eb;
+}
+
+.sidebar-psikolog-card {
+    border: 1px solid #d7e0ee;
+    border-radius: 12px;
+    background: #f7faff;
+    padding: 14px 10px;
+    margin-bottom: 14px;
+    text-align: center;
+}
+
+.sidebar-psikolog-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1d3558;
+    margin-bottom: 3px;
+}
+
+.sidebar-psikolog-role {
+    font-size: 12px;
+    color: #5d7393;
+}
+
+/* Profil Psikolog */
+.profil-page {
+    margin-top: 8px;
+}
+
+.profil-alert {
+    border-radius: 8px;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.profil-alert.success {
+    background: #eaf8ef;
+    border: 1px solid #b9e2c5;
+    color: #1f5b35;
+}
+
+.profil-alert.error {
+    background: #ffefef;
+    border: 1px solid #f1c1c1;
+    color: #8b2f2f;
+}
+
+.profil-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.profil-topbar h3 {
+    margin: 0;
+    color: #1c2f4f;
+    font-size: 24px;
+}
+
+.profil-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--pphc-blue);
+    border-radius: 10px;
+    background: var(--pphc-blue);
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 10px 16px;
+    cursor: pointer;
+    width: auto;
+}
+
+.profil-btn.secondary {
+    background: #fff;
+    color: #23416f;
+    border-color: #c4d1e8;
+}
+
+.profil-identity-card {
+    background: #fff;
+    border: 1px solid #d7e0ee;
+    border-radius: 14px;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 14px;
+}
+
+.profil-identity-card img {
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+}
+
+.profil-identity-card h4 {
+    margin: 0 0 6px 0;
+    color: #1f3554;
+    font-size: 20px;
+}
+
+.profil-identity-card p {
+    margin: 0 0 6px 0;
+    color: #425f86;
+    font-size: 15px;
+}
+
+.profil-identity-card span {
+    display: inline-block;
+    border: 1px solid #cfd9ea;
+    border-radius: 999px;
+    padding: 4px 12px;
+    color: #2f4669;
+    font-size: 16px;
+}
+
+.profil-stat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(140px, 1fr));
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.profil-stat-card {
+    background: #fff;
+    border: 1px solid #d7e0ee;
+    border-radius: 12px;
+    padding: 12px 14px;
+}
+
+.profil-stat-card small {
+    display: block;
+    color: #5f7698;
+    margin-bottom: 4px;
+    font-size: 13px;
+}
+
+.profil-stat-card strong {
+    color: #1f3554;
+    font-size: 28px;
+}
+
+.profil-form {
+    display: grid;
+    gap: 14px;
+}
+
+.profil-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.profil-card {
+    background: #fff;
+    border: 1px solid #d7e0ee;
+    border-radius: 12px;
+    padding: 16px;
+}
+
+.profil-card h4 {
+    margin-bottom: 12px;
+    color: #1c355b;
+    font-size: 18px;
+}
+
+.profil-field-grid {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 10px 12px;
+    align-items: center;
+}
+
+.profil-field-grid label {
+    color: #324b72;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.profil-value {
+    min-height: 40px;
+    border: 1px solid #e2e8f4;
+    background: #fafcff;
+    border-radius: 8px;
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+    color: #1f3554;
+    font-size: 14px;
+}
+
+.profil-card input,
+.profil-card select {
+    border: 1px solid #cad5e8;
+    border-radius: 8px;
+    background: #fff;
+    padding: 8px 10px;
+}
+
+.profil-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.password-card {
+    margin-top: 14px;
+}
+
+.password-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    gap: 12px;
+}
+
+.password-grid label {
+    display: block;
+    margin-bottom: 6px;
+    color: #324b72;
+    font-weight: 700;
+}
+
+@media (max-width: 1100px) {
+    .profil-stat-grid {
+        grid-template-columns: repeat(2, minmax(140px, 1fr));
+    }
+
+    .profil-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .password-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .profil-topbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .profil-btn {
+        width: 100%;
+    }
+
+    .profil-stat-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profil-identity-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .profil-field-grid {
+        grid-template-columns: 1fr;
+        gap: 6px;
+    }
+
+    .profil-form-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+/* Catatan Sesi */
+.catatan-page {
+    margin-top: 10px;
+}
+
+.catatan-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.catatan-pasien {
+    font-size: 28px;
+    font-weight: 600;
+    color: #17365e;
+}
+
+.catatan-top-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.catatan-link-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #2f6fdd;
+    border-radius: 8px;
+    background: #2f6fdd;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 10px 14px;
+    cursor: pointer;
+}
+
+.catatan-link-btn-print {
+    background: #1f4d99;
+    border-color: #1f4d99;
+}
+
+.catatan-meta {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    background: #fff;
+    border: 1px solid #dbe3f3;
+    border-radius: 10px;
+    margin-bottom: 14px;
+    overflow: hidden;
+}
+
+.meta-item {
+    padding: 14px 16px;
+    border-right: 1px solid #e8edf7;
+    font-size: 16px;
+    color: #1f3554;
+}
+
+.meta-item:last-child {
+    border-right: none;
+}
+
+.catatan-layout {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 14px;
+}
+
+.catatan-card {
+    background: #fff;
+    border: 1px solid #dbe3f3;
+    border-radius: 10px;
+    padding: 14px;
+}
+
+.catatan-main .catatan-card {
+    display: grid;
+    gap: 10px;
+}
+
+.catatan-main label {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a355d;
+    margin-top: 2px;
+}
+
+.catatan-main label span,
+.catatan-side h4 span {
+    font-weight: 500;
+    color: #6b7c98;
+    font-size: 15px;
+}
+
+.catatan-main textarea {
+    width: 100%;
+    resize: vertical;
+    border: 1px solid #cbd7ef;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 14px;
+    background: #fdfdff;
+}
+
+.catatan-side {
+    display: grid;
+    gap: 14px;
+    align-content: start;
+}
+
+.catatan-side h4 {
+    font-size: 24px;
+    color: #1a355d;
+    margin-bottom: 12px;
+}
+
+.catatan-side select,
+.catatan-side input[type="file"] {
+    border: 1px solid #cbd7ef;
+    border-radius: 8px;
+    background: #fff;
+    width: 100%;
+}
+
+.catatan-side small {
+    display: block;
+    color: #6b7c98;
+    margin-top: 8px;
+    font-size: 12px;
+}
+
+.catatan-actions {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: -4px;
+}
+
+.btn-simpan,
+.btn-cetak-inline,
+.btn-batal {
+    width: auto;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.btn-simpan {
+    background: #2f6fdd;
+    color: #fff;
+    border: 1px solid #2f6fdd;
+}
+
+.btn-cetak-inline {
+    background: #1f4d99;
+    color: #fff;
+    border: 1px solid #1f4d99;
+}
+
+.btn-batal {
+    background: #fff;
+    color: #223754;
+    border: 1px solid #c9d5ea;
+    display: inline-flex;
+    align-items: center;
+}
+
+@media (max-width: 1100px) {
+    .catatan-meta {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .meta-item:nth-child(2n) {
+        border-right: none;
+    }
+
+    .catatan-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .catatan-topbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .catatan-top-actions {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .catatan-link-btn {
+        width: 100%;
+    }
+
+    .catatan-pasien {
+        font-size: 22px;
+    }
+
+    .catatan-meta {
+        grid-template-columns: 1fr;
+    }
+
+    .meta-item {
+        border-right: none;
+        border-bottom: 1px solid #e8edf7;
+    }
+
+    .meta-item:last-child {
+        border-bottom: none;
+    }
+
+    .catatan-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-simpan,
+    .btn-cetak-inline,
+    .btn-batal {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+}

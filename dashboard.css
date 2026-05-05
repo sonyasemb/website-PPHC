@@ -1,0 +1,3 @@
+@import url("./dashboard-base.css"); /* Pengaturan global + komponen umum (navbar, tombol, card) */
+@import url("./dashboard-sections.css"); /* Style per section: home, tentang, layanan, tes gratis, komunitas, daftar */
+@import url("./dashboard-psikolog.css"); /* Style area psikolog: card psikolog, modal detail, swiper */

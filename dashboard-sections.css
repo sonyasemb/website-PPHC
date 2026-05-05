@@ -1,0 +1,467 @@
+﻿/* =================================
+     HERO / HOME SECTION
+  ================================= */
+#home {
+  padding: 120px 0; /* Jarak atas-bawah area hero */
+  min-height: 90vh; /* Tinggi minimal hero pada desktop */
+  text-align: center;
+  color: #ffffff; /* /hero text/ */
+  background-image:
+    linear-gradient(rgba(72, 102, 173, 0.75),
+      rgba(214, 156, 172, 0.75)),
+    url("../../ikon/bgatas.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#home .hero-title {
+  font-family: "Poppins", "Inter", Arial, sans-serif;
+  font-weight: 700;
+  font-size: clamp(20px, 4vw, 80px); /* Ubah ukuran judul utama */
+  letter-spacing: 0.2px;
+}
+
+#home .hero-text {
+  font-family: "Poppins", "Inter", Arial, sans-serif;
+  font-weight: 450;
+  font-size: clamp(10px, 3vw, 15px); /* Ubah ukuran deskripsi hero */
+  color: rgba(255, 255, 255, 0.9); /* /hero subtitle/ */
+  max-width: 900px;
+  width: 100%;
+  line-height: 4.0; /* Ubah jarak antarbaris deskripsi */
+  margin: 12px auto 0;
+}
+
+.btn-pphc {
+  background: #08327b; /* /tombol utama biru/ */
+  color: #fff;
+  padding: 24px 40px;
+  border-radius: 999px;
+  font: 600 18px/1 "Poppins", sans-serif;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
+  box-shadow: 0 8px 20px rgba(47, 95, 179, 0.25);
+}
+
+.btn-pphc:hover {
+  color: #f363eb; /* /tombol hover pink/ */
+}
+
+.btn-pphc:active {
+  transform: scale(1.06);
+  box-shadow: 0 6px 14px rgba(47, 95, 179, 0.3);
+}
+
+.btn-pphc-pink {
+  background: #08327b;
+  box-shadow: 0 8px 20px rgba(234, 135, 149, 0.25);
+}
+
+.btn-pphc-pink:active {
+  box-shadow: 0 6px 14px rgba(214, 118, 133, 0.3);
+}
+
+@media (max-width: 768px) {
+  #home {
+    min-height: 60vh;
+    padding: 90px 0;
+  }
+}
+
+/* =================================
+     TENTANG SECTION
+  ================================= */
+#tentang img {
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+}
+
+#tentang p {
+  font-size: 16px;
+  line-height: 2.3;
+}
+
+#tentang .tentang-box {
+  border: 2px solid #2563eb; /* /border box tentang/ */
+  padding: 16px 20px;
+  border-radius: 12px;
+  background: #ffffff; /* /bg box tentang/ */
+  margin: 12px 0 18px;
+}
+
+#tentang .tentang-box,
+#tentang .tentang-box p,
+#tentang .tentang-box h5 {
+  color: #f363eb;
+}
+
+#tentang .tentang-box .text-muted {
+  color: #f363eb;
+}
+
+#tentang .tentang-box h5 {
+  margin: 10px 0;
+  font-weight: 600;
+}
+
+#tentang .tentang-text {
+  max-width: 720px;
+  margin-top: -10px;
+}
+
+#tentang .tentang-text h1 {
+  font-size: 100px;
+  font-family: "Poppins", "Inter";
+  color:  #08327b; /* /judul tentang biru/ */
+}
+
+#tentang .tentang-visual {
+  margin-left: auto;
+  margin-top: -18px;
+}
+
+#tentang .tentang-visual img {
+  margin-left: auto;
+    margin-top: -70px;
+}
+
+/* =================================
+     KOMUNITAS SECTION
+  ================================= */
+#komunitas {
+  background: linear-gradient(
+    to bottom,
+    #fdf4fc 0%,
+    #ffe7fa 50%,
+    #ffdcfc 60%,
+    #f9e3e6 150%
+  );
+}
+
+#komunitas .card {
+  transition: 0.3s ease;
+}
+
+#komunitas .card:hover {
+  transform: translateY(-6px);
+}
+
+#komunitas h5 {
+  margin-top: 10px;
+}
+
+/* Komunitas Card Title - Pink Color */
+#komunitas .card-title a {
+  color: #d37886;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+#komunitas .card-title a:hover {
+  color: #f363eb ;
+}
+
+#komunitas .komunitas-slider {
+  position: relative;
+  height: 250px;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  background: #f8f8fb;
+}
+
+#komunitas .komunitas-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+#komunitas .komunitas-slide.is-active {
+  opacity: 1;
+}
+
+#komunitas .komunitas-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+#komunitas .komunitas-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 2;
+}
+
+#komunitas .komunitas-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#komunitas .komunitas-dot.is-active {
+  background: #ffffff;
+}
+
+.section-title {
+  font-weight: 600;
+  color:  #08327b; /* /judul section biru/ */
+  font-size: 50px; /* Ukuran judul section */
+}
+
+/* TES GRATIS SECTION */
+#tes-gratis {
+  background: #ea99d4; /* /bg tes gratis pink/ */
+  height: 450px; /* Tinggi section tes gratis desktop */
+}
+
+#tes-gratis .tes-gratis-title {
+  font-family: "Poppins", "Inter", Arial, sans-serif;
+  font-weight: 800;
+  font-size: clamp(30px, 3.2vw, 62px);
+  line-height: 1.2;
+  color: #ffffff;
+  max-width: 1080px;
+  margin: 0 auto 24px;
+}
+
+#tes-gratis .tes-gratis-box {
+  background: #f5d3ec;
+  border-radius: 42px;
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 20px 120px 20px 36px;
+  gap: 16px;
+}
+
+#tes-gratis .tes-gratis-image {
+  width: min(28vw, 330px);
+  height: auto;
+  display: block;
+}
+
+#tes-gratis .tes-gratis-btn {
+  background: #0f53b6; /* /btn tes gratis biru/ */
+  color: #ffffff; /* /text btn tes/ */
+  border-radius: 999px;
+  padding: 18px 42px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: clamp(22px, 2.2vw, 40px);
+  line-height: 1;
+  min-width: min(32vw, 470px);
+  justify-content: center;
+}
+
+#tes-gratis .tes-gratis-btn:hover {
+  color: #ffffff;
+}
+
+#tes-gratis .tes-gratis-icon {
+  width: 56px;
+  height: 56px;
+  color: #ffffff;
+  stroke-width: 2.1;
+}
+
+@media (max-width: 991px) {
+  #tes-gratis .tes-gratis-box {
+    flex-direction: column;
+    border-radius: 30px;
+    padding: 18px 14px;
+    gap: 14px;
+  }
+
+  #tes-gratis .tes-gratis-image {
+    width: min(66vw, 300px);
+  }
+
+  #tes-gratis .tes-gratis-btn {
+    min-width: 100%;
+    padding: 18px 24px;
+    font-size: clamp(22px, 5.5vw, 30px);
+  }
+
+  #tes-gratis .tes-gratis-icon {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* LAYANAN SECTION*/
+#layanan {
+  background: linear-gradient(
+    90deg,
+    #b1c5f3 0%,
+    #cbbccd 50%,
+    #e6b8be 100%
+  );
+}
+
+#layanan .layanan-card {
+  border: 1px solid #f1d5db; /* /border card layanan/ */
+  border-radius: 24px; /* Radius card layanan */
+  overflow: hidden;
+  background: #fdecef; /* /bg card layanan/ */
+  box-shadow: 0 14px 28px rgba(17, 24, 39, 0.08);
+  min-height: 420px;
+}
+
+#layanan .layanan-media {
+  background: #ffffff;
+}
+
+#layanan .layanan-media img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+#layanan .layanan-body {
+  position: relative;
+  padding: 42px 26px 28px;
+  text-align: left;
+}
+
+#layanan .layanan-icon {
+  position: absolute;
+  top: -30px;
+  left: 26px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #3b66c3; /* /icon layanan biru/ */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 20px rgba(59, 102, 195, 0.28);
+}
+
+#layanan .layanan-icon svg {
+  width: 28px;
+  height: 28px;
+  color: #ffffff;
+  stroke-width: 2.2;
+}
+
+#layanan .layanan-title {
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+#layanan .layanan-divider {
+  height: 2px;
+  width: 54px;
+  background: #3b66c3;
+  border-radius: 999px;
+  margin-bottom: 12px;
+}
+
+#layanan .layanan-text {
+  color: #334155;
+  margin-bottom: 18px;
+}
+
+#layanan .btn-pphc-dark {
+  background: #121826;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font: 600 14px/1 "Poppins", sans-serif;
+  box-shadow: 0 10px 20px rgba(17, 24, 39, 0.2);
+}
+
+#layanan .btn-pphc-dark:hover {
+  color: #ffffff;
+  opacity: 0.92;
+}
+
+#layanan .btn-layanan-more {
+  color: #ffffff; /* /text btn more/ */
+  border-color: rgba(37, 99, 235, 0.35); /* /border btn more/ */
+  background: #08327b; /* /btn more biru/ */
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 999px;
+}
+
+#layanan .btn-layanan-more[aria-expanded="true"] {
+  background: #f363eb; /* /btn more open pink/ */
+  border-color: #f363eb; /* /border open pink/ */
+  color: #ffffff;
+}
+
+#layanan .btn-layanan-more svg {
+  width: 35px;
+  height: 35px;
+  stroke-width: 2.2;
+}
+
+#layanan .btn-layanan-more-text {
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+}
+
+/* =================================
+   FOOTER / DAFTAR SECTION
+================================= */
+
+#daftar {
+  position: relative;
+  color: #ffffff;
+  padding: 120px 0; /* Jarak isi section daftar */
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+
+  /* background gambar + overlay biru */
+  background-image:
+    linear-gradient(rgba(41, 69, 142, 0.815), rgba(32, 63, 140, 0.88)),
+    url("../../ikon/bgdaftar.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#daftar .container {
+  width: 100%;
+}
+
+/* Judul */
+#daftar h4,
+#daftar h5 {
+  color: #ff8fb1; /* /judul daftar pink/ */
+  font-family: "Poppins", sans-serif;
+}
+
+/* Text */
+#daftar p,
+#daftar a {
+  color: #ffffff;
+}
+
+#daftar h1 {
+  font-size: 60px;
+}
+/* Button subscribe */
+#daftar .btn-subscribe:hover {
+  background: #f363eb;
+}
+

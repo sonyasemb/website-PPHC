@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+.brand-logo {
+    width: min(800px, 100%);
+    height: auto;
+    object-fit: contain;
+    border-radius: 0;
+    margin-bottom: 20px;
+    background: transparent !important;
+    box-shadow: none !important;
+    mix-blend-mode: multiply;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.login-page {
+       /* gradient pastel soft */
+    background: linear-gradient(
+        135deg,
+        #eef2ff 0%,
+        #e0e7ff 25%,
+        #f3e8ff 50%,
+        #fde2f3 75%,
+        #fde2f3 100%
+    );
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.login-wrap {
+    padding: 40px 0;
+}
+
+.brand-box {
+    max-width: 530px;
+    margin-top: 10px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background: transparent;
+    box-shadow: none;
+}
+
+.login-card {
+    border-radius: 10px;
+    max-width: 380px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #ffffff;
+    box-shadow: 0 12px 30px rgba(17,24,39,0.12);
+    background: #ffffff;
+}
+
+.btn-primary {
+    background: #f363eb;
+    border-color: #f363eb;
+}
+
+.btn-primary:hover {
+    background: #08327b;
+}
+
+.form-control:focus {
+    border-color: #cbd5f5;
+    box-shadow: none;
+}
+
+.btn:focus,
+.btn:focus-visible {
+    box-shadow: none;
+}
+
+.form-control:-webkit-autofill,
+.form-control:-webkit-autofill:hover,
+.form-control:-webkit-autofill:focus,
+.form-control:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px #ffffff inset;
+    box-shadow: 0 0 0 1000px #ffffff inset;
+    -webkit-text-fill-color: #1f2937;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+.auth-link a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.error {
+    color: #dc2626;
+    text-align: center;
+    margin-bottom: 10px;
+}

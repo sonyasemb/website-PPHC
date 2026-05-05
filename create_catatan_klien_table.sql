@@ -1,0 +1,21 @@
+CREATE TABLE IF NOT EXISTS catatan_klien (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_sesi VARCHAR(64) NOT NULL,
+    pasien VARCHAR(150) NOT NULL,
+    tanggal DATE DEFAULT NULL,
+    waktu VARCHAR(32) DEFAULT NULL,
+    jenis VARCHAR(64) DEFAULT NULL,
+    keluhan TEXT,
+    observasi TEXT,
+    ringkasan TEXT,
+    diagnosis TEXT,
+    rencana TEXT,
+    rekomendasi TEXT,
+    status_sesi VARCHAR(32) DEFAULT NULL,
+    psikolog VARCHAR(150) DEFAULT NULL,
+    created_at DATETIME NOT NULL,
+    updated_at DATETIME NOT NULL,
+    UNIQUE KEY uniq_sesi (id_sesi),
+    KEY idx_psikolog (psikolog),
+    KEY idx_tanggal (tanggal)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

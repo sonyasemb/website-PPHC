@@ -1,0 +1,160 @@
+﻿/* =================================
+   GLOBAL CLEAN & READABLE
+================================= */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --nav-height: 96px; /* Tinggi navbar desktop */
+}
+
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  color: #1f2937; /* /body text utama/ */
+  line-height: 1.6;
+  margin: 0;
+  padding-top: var(--nav-height); /* Supaya konten tidak tumpangtindih */
+}
+
+/* =================================
+   NAVBAR FINAL KAKHANNA
+================================= */
+
+.navbar-pphc {
+  background: #ffffff; /* /navbar bg/ */
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.08);
+  height: var(--nav-height);
+  padding: 0;
+}
+
+/* Wrapper utama */
+.navbar-pphc .nav-shell {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+/* ================= LOGO PPHC ================= */
+
+.navbar-pphc .navbar-brand {
+  flex-shrink: 0;
+  margin: 0;
+}
+
+.navbar-pphc .pphc-logo {
+  width: 200px; /* Ubah ukuran logo utama  */
+  height: auto;
+  object-fit: contain;
+}
+
+.navbar-pphc .dropdown-item:hover {
+  background-color: #fa7ff4 !important; /* /dropdown hover pink/ */
+  color: #ffffff !important; /* /dropdown text hover/ */
+}
+/* ================= MENU ================= */
+
+.navbar-pphc .navbar-collapse {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.navbar-pphc .navbar-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 32px;
+}
+
+.navbar-pphc .nav-link {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  color: #111827; /* /navbar menu text/ */
+  padding: 0;
+  transition: color 0.3s ease;
+}
+
+/* Hover menu jadi pink */
+.navbar-pphc .nav-link:hover {
+  color: #f363eb; /* /navbar menu hover pink/ */
+}
+
+/* Menu aktif */
+.navbar-pphc .nav-link.active {
+  color: #f363eb; /* /navbar menu aktif pink/ */
+}
+
+/* ================= BUTTON DAFTAR ================= */
+
+.btn-nav-cta {
+  background: #111827; /* /tombol login daftar/ */
+  color: #ffffff;
+  border-radius: 999px;
+  padding: 10px 24px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  margin-left: auto;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover button ikut pink */
+.btn-nav-cta:hover {
+  background: #f363eb; /* /tombol login hover pink/ */
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+
+@media (max-width: 991px) {
+
+  :root {
+    --nav-height: 100px; /* Tinggi navbar saat tablet/mobile */ 
+  }
+
+  .navbar-pphc {
+    padding: 10px 0;
+  }
+
+  .navbar-pphc .navbar-collapse {
+    margin-top: 12px;
+    align-items: flex-start;
+  }
+
+  .navbar-pphc .navbar-nav {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .btn-nav-cta {
+    width: 100%;
+    margin-top: 12px;
+  }
+}
+/* =================================
+     CARD GLOBAL KESELURUHAN
+  ================================= */
+.card {
+  border-radius: 16px; /* Radius default semua card */
+  border: none;
+}
+
+.card-body {
+  padding: 20px;
+  display: block;
+  /* matikan flex lama */
+}
+

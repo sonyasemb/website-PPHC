@@ -1,0 +1,347 @@
+﻿/* =================================
+     PSIKOLOG SECTION
+  ================================= */
+.psikolog-section {
+  --psikolog-bg: #fddefb; /* /bg psikolog pink/ */
+  background: var(--psikolog-bg);
+  position: relative;
+  overflow: hidden;
+  padding: 90px 0; /* Jarak atas-bawah section psikolog */
+  backdrop-filter: blur(30px);
+}
+
+.psikolog-section::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 140px;
+  background: linear-gradient(to bottom, rgba(253, 222, 251, 0) 0%, var(--psikolog-bg) 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.psikolog-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.psikolog-title {
+  font-size: clamp(26px, 3vw, 38px);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 1000;
+  color: #0f172a; /* /judul psikolog gelap/ */
+  margin: 0;
+}
+
+.psikolog-title span {
+  font-size: 65px; /* Ukuran kata highlight pada judul */
+  color: #f363eb; /* /highlight pink/ */
+  position: relative;
+}
+
+.psikolog-subtitle {
+  max-width: 640px;
+  margin: 0;
+  color: #475569;
+  font-size: 17px;
+}
+
+.psikolog-rating {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: #5185f5; /* /bg rating biru/ */
+  border: 1px solid rgba(37, 99, 235, 0.45);
+  box-shadow: 0 10px 22px rgba(37, 99, 235, 0.28);
+}
+
+.psikolog-rating .rating-stars {
+  display: inline-flex;
+  gap: 4px;
+  color: #f4b400;
+}
+
+.psikolog-rating .rating-stars svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  stroke: currentColor;
+  stroke-width: 2.2;
+}
+
+.psikolog-rating .rating-text {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f2937;
+  letter-spacing: 0.2px;
+}
+
+@media (max-width: 576px) {
+  .psikolog-rating {
+    gap: 8px;
+    padding: 6px 12px;
+  }
+
+  .psikolog-rating .rating-stars svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .psikolog-rating .rating-text {
+    font-size: 13px;
+  }
+}
+
+/* CARD */
+.psikolog-section .psikolog-card {
+  background: #08327beb; /* /card psikolog biru/ */
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  padding: 16px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.psikolog-section .psikolog-card:hover {
+  transform: translateY(-6px);
+}
+
+/* BUTTON DETAIL */
+.psikolog-section .btn-detail {
+  border: none;
+  background: #111827; /* Warna tombol Lihat Detail */
+  color: #ffffff;
+  padding: 10px 24px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.psikolog-section .btn-detail:hover {
+  background: #f363eb; /* Warna hover tombol Lihat Detail */
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* =================================
+     MODAL PSIKOLOG
+  ================================= */
+.modal-psikolog {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45); /* Overlay gelap saat modal terbuka */
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* BOX */
+.modal-box {
+  position: relative;
+  background: #ffffff;
+  width: 90%;
+  max-width: 420px;
+  border-radius: 16px;
+  padding: 24px;
+  animation: scaleIn 0.3s ease;
+}
+
+/* ANIMATION */
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* CLOSE BUTTON */
+.close-btn {
+  position: absolute;
+  right: 18px;
+  top: 12px;
+  font-size: 22px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* BUTTON LANJUT */
+.btn-lanjut {
+  display: block;
+  margin-top: 15px;
+  text-align: center;
+  background: #2563eb;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.psikologSwiper .swiper-button-next,
+.psikologSwiper .swiper-button-prev {
+  width: 44px;
+  height: 44px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.psikologSwiper .swiper-button-next::after,
+.psikologSwiper .swiper-button-prev::after {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.psikologSwiper .swiper-button-prev {
+  left: 0;
+}
+
+.psikologSwiper .swiper-button-next {
+  right: 0;
+}
+
+.psikolog-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* SWIPER */
+.psikologSwiper {
+  position: relative;
+  padding: 0 60px 40px; /* Ruang kiri-kanan untuk tombol navigasi */
+}
+
+
+/* WRAPPER FOTO (BACKGROUND) */
+.psikolog-photo {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+/* FOTO */
+.psikolog-photo img {
+  width: 100%;
+  height: 220px; /* Tinggi foto psikolog */
+  object-fit: cover; /* Foto dipotong proporsional agar rapi */
+  border-radius: 16px;
+  background: #ffffff;
+}
+
+/* BODY */
+.psikolog-body {
+  padding: 16px 18px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* NAMA */
+.psikolog-body h5 {
+  font-size: 16px;
+  margin-bottom: 6px;
+  color: #ffffff;
+}
+
+/* BADGE */
+.psikolog-body .badge {
+  background: #e2e8ff; /* Warna badge jabatan */
+  color: #2563eb;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  align-self: center;
+}
+
+/* PRAKTIK */
+.psikolog-body .praktik {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 6px 12px;
+  margin: 10px auto 12px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+  background: rgba(59, 102, 195, 0.12);
+  border: 1px solid rgba(59, 102, 195, 0.18);
+  border-radius: 999px;
+}
+
+.psikolog-body .praktik svg {
+  width: 16px;
+  height: 16px;
+  color: #f363eb;
+  stroke: currentColor;
+  stroke-width: 2.2;
+}
+
+/* SESI (TINGGI KONSISTEN) */
+.psikolog-body .sesi {
+  min-height: 64px;
+  /* INI KUNCI UTAMA */
+  margin-bottom: 12px;
+}
+
+.psikolog-body .sesi span {
+  display: inline-block;
+  background: #f1f5f9;
+  padding: 4px 8px;
+  border-radius: 10px;
+  font-size: 12px;
+  margin: 2px;
+}
+
+/* BUTTON */
+.psikolog-body .btn-detail {
+  margin-top: auto;
+  width: 100%;
+}
+
+/* OVERRIDE: SWIPER NAVIGATION MATCH BTN-NAV-CTA */
+.psikologSwiper .swiper-button-next,
+.psikologSwiper .swiper-button-prev {
+  background: #111827 !important; /* Warna tombol panah swiper */
+  box-shadow: 0 6px 20px rgba(17, 24, 39, 0.25) !important;
+  border-radius: 50% !important;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.psikologSwiper .swiper-button-next::after,
+.psikologSwiper .swiper-button-prev::after {
+  color: #ffffff !important;
+}
+
+.psikologSwiper .swiper-button-next:hover,
+.psikologSwiper .swiper-button-prev:hover {
+  background: #f363eb !important; /* Warna hover tombol panah swiper */
+  transform: translateY(-50%) scale(1.05);
+}

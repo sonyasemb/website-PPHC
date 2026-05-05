@@ -1,0 +1,290 @@
+/* Styles for catatan_sesi.php, including print layout */
+.catatan-print {
+    display: none;
+    background: #f6f8fc;
+    border: 1px solid #d4ddea;
+    border-radius: 16px;
+    padding: 22px 26px 24px;
+    color: #1b2f4a;
+    font-family: "Segoe UI", Arial, sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.print-topline {
+    height: 5px;
+    background: linear-gradient(90deg, #2f6fdd, #6a9bea);
+    border-radius: 999px;
+    margin-bottom: 12px;
+}
+
+.print-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.print-title {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 30px;
+    color: #1f3b63;
+    font-weight: 600;
+}
+
+.print-doctor {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.print-doctor-meta {
+    text-align: right;
+}
+
+.print-doctor-name {
+    font-weight: 700;
+    color: #1f3b63;
+    font-size: 16px;
+}
+
+.print-doctor-role {
+    font-size: 12px;
+    color: #5b6f8f;
+}
+
+.print-doctor-avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #dde8fb;
+    border: 2px solid #b8cbe7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #2b4f7d;
+}
+
+.print-divider {
+    height: 1px;
+    background: #cfd8ea;
+    margin: 12px 0;
+}
+
+.print-pasien {
+    font-size: 16px;
+    color: #1f3b63;
+    margin-bottom: 10px;
+}
+
+.print-pasien span {
+    font-weight: 700;
+    color: #2055a4;
+}
+
+.print-meta-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border: 1px solid #d5ddec;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.print-meta-item {
+    padding: 10px 12px;
+    border-right: 1px solid #e5ebf6;
+    border-bottom: 1px solid #e5ebf6;
+    font-size: 13px;
+    color: #2a3f5f;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    min-height: 42px;
+}
+
+.print-meta-item:nth-child(4),
+.print-meta-item:nth-child(6) {
+    border-right: none;
+}
+
+.print-meta-item:nth-child(5),
+.print-meta-item:nth-child(6) {
+    border-bottom: none;
+}
+
+.print-meta-item.span-2 {
+    grid-column: span 2;
+}
+
+.print-meta-item-status {
+    justify-content: center;
+}
+
+.print-meta-label {
+    font-weight: 700;
+    color: #4d5f7b;
+}
+
+.print-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 700;
+    border: 1px solid transparent;
+}
+
+.print-badge.status-selesai {
+    background: #e4f5ea;
+    color: #2d6b3f;
+    border-color: #bfe4c9;
+}
+
+.print-badge.status-lanjut {
+    background: #fff6db;
+    color: #7b5c1a;
+    border-color: #f1d7a2;
+}
+
+.print-badge.status-ditunda {
+    background: #fdecec;
+    color: #a23434;
+    border-color: #f2b9b9;
+}
+
+.print-section {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #d6deec;
+    page-break-inside: avoid;
+}
+
+.print-section h4 {
+    margin: 0 0 6px 0;
+    font-size: 15px;
+    color: #1f3554;
+}
+
+.print-optional {
+    font-weight: 500;
+    font-size: 12px;
+    color: #6b7c98;
+}
+
+.print-text {
+    margin: 0;
+    font-size: 13px;
+    color: #2d3f5f;
+    line-height: 1.5;
+    white-space: pre-wrap;
+}
+
+.print-pill {
+    margin-top: 6px;
+    border: 1px solid #c9d5ea;
+    background: #f8faff;
+    border-radius: 8px;
+    padding: 8px 10px;
+    font-size: 13px;
+    color: #2d3f5f;
+    white-space: pre-wrap;
+}
+
+.print-list {
+    margin: 0;
+    padding-left: 18px;
+    font-size: 13px;
+    color: #2d3f5f;
+    line-height: 1.5;
+    display: none;
+}
+
+.print-footer {
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid #d6deec;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 16px;
+}
+
+.print-footer-info {
+    font-size: 13px;
+    color: #2a3f5f;
+    display: grid;
+    gap: 4px;
+}
+
+.print-footer-line span {
+    font-weight: 700;
+    color: #1f3554;
+}
+
+.print-signature {
+    text-align: right;
+    min-width: 180px;
+}
+
+.print-sign-image {
+    max-height: 46px;
+    max-width: 160px;
+    display: block;
+    margin: 0 0 4px auto;
+}
+
+.print-sign-image[src=""] {
+    display: none;
+}
+
+.print-sign-name {
+    font-weight: 700;
+    color: #1f3554;
+}
+
+.print-sign-role {
+    font-size: 12px;
+    color: #5b6f8f;
+}
+
+@media print {
+    @page {
+        margin: 12mm;
+    }
+
+    html,
+    body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        background: #fff !important;
+    }
+
+    .sidebar,
+    .header,
+    .catatan-topbar,
+    .catatan-meta,
+    .catatan-layout,
+    .catatan-top-actions,
+    .catatan-actions,
+    .user-box {
+        display: none !important;
+    }
+
+    .content {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .catatan-page {
+        margin: 0;
+    }
+
+    .catatan-print {
+        display: block !important;
+        box-shadow: none !important;
+    }
+}

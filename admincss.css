@@ -1,0 +1,774 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Compact desktop mode (mirip zoom browser 90%) */
+@media (min-width: 1200px) {
+    .sidebar {
+        width: 234px !important;
+        padding: 18px !important;
+    }
+
+    .content {
+        margin-left: 234px !important;
+        padding: 22px !important;
+    }
+
+    .cards,
+    .filter-grid {
+        gap: 12px !important;
+    }
+
+    .card,
+    .filter-box {
+        padding: 18px !important;
+    }
+
+    .table-card h2,
+    .table-card h3 {
+        font-size: 18px !important;
+        padding: 12px 14px !important;
+    }
+
+    .table-reservasi th {
+        font-size: 15px !important;
+        padding: 10px 11px !important;
+    }
+
+    .table-reservasi td {
+        font-size: 15px !important;
+        padding: 9px 11px !important;
+    }
+
+    select,
+    input,
+    button {
+        font-size: 15px !important;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --staff-bg: #f1f4f8;
+    --staff-navy: #2d4662;
+    --staff-line: #d2dbe7;
+    --staff-text: #2c425c;
+    --staff-muted: #6f8196;
+    --pphc-blue: #08327b;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background: #f4f4f4;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.sidebar {
+    width: 260px;
+    background: #ffffff;
+    border-right: 1px solid #ddd;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    overflow-y: auto;
+}
+
+.sidebar h3 {
+    font-size: 18px;
+    margin-bottom: 18px;
+    color: #08327b;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.brand img {
+    width: 28px;
+    height: 28px;
+    max-width: 28px;
+    max-height: 28px;
+    border-radius: 6px;
+    object-fit: contain;
+    display: block;
+}
+
+.menu-title {
+    margin-top: 25px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #444;
+}
+
+.menu-item {
+    margin: 10px 0;
+    padding: 8px 10px;
+    cursor: pointer;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu-item .icon img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    display: block;
+}
+
+.sidebar .menu-item span:not(.icon) {
+    color: #08327b;
+}
+
+.sidebar .menu-item {
+    color: #08327b;
+}
+
+.sidebar a.menu-item,
+.sidebar a.menu-item:visited,
+.sidebar a.menu-item:active {
+    color: #08327b;
+    text-decoration: none;
+}
+
+.sidebar a.menu-item.active {
+    background: #f9b2f6;
+    color: #08327b;
+    font-weight: 600;
+}
+
+.menu-item:hover {
+    background: #f363eb;
+}
+
+.sidebar .menu-item:hover {
+    background: #f9b2f6;
+}
+
+.content {
+    margin-left: 260px;
+    padding: 25px;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.user-box {
+    position: relative;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    padding: 8px 14px;
+    border-radius: 8px;
+    background: #fff;
+}
+
+.user-box small {
+    display: block;
+    color: #666;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 65px;
+    right: 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 150px;
+    padding: 10px;
+}
+
+.dropdown a {
+    display: block;
+    padding: 8px;
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown a:hover {
+    background: #f1f1f1;
+}
+
+.filter-box {
+    background: #fff;
+    padding: 20px;
+    margin-top: 25px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.filter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.table-card {
+    background: #f7f9fc;
+    padding: 0;
+    margin-top: 25px;
+    border-radius: 10px;
+    border: 1px solid var(--staff-line);
+    overflow: hidden;
+    overflow-x: auto;
+}
+
+.table-card h2 {
+    margin: 0;
+    padding: 14px 16px;
+    font-size: 20px;
+    color: var(--staff-navy);
+    border-bottom: 1px solid var(--staff-line);
+}
+
+.jadwal-card {
+    margin-top: 25px;
+    background: #fff;
+}
+
+.jadwal-toolbar {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--staff-line);
+    background: #f7f9fc;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.jadwal-filter {
+    display: grid;
+    grid-template-columns: minmax(180px, 260px) 170px 130px;
+    gap: 10px;
+    align-items: end;
+    margin: 0;
+}
+
+.jadwal-filter-item label {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--staff-text);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.jadwal-week-label {
+    color: var(--staff-navy);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.jadwal-table-wrap {
+    overflow-x: auto;
+}
+
+.jadwal-grid {
+    width: 100%;
+    min-width: 780px;
+    border-collapse: collapse;
+    color: var(--staff-text);
+}
+
+.jadwal-grid th,
+.jadwal-grid td {
+    border-bottom: 1px solid #cfdae8;
+    border-right: 1px solid #e2e8f4;
+    padding: 10px 12px;
+    text-align: center;
+}
+
+.jadwal-grid th:last-child,
+.jadwal-grid td:last-child {
+    border-right: none;
+}
+
+.jadwal-grid thead th {
+    background: var(--staff-navy);
+    color: #f5f9ff;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.jadwal-grid thead small {
+    color: #dbe6f8;
+    font-weight: 500;
+}
+
+.jadwal-hour {
+    font-weight: 600;
+    background: #f8fbff;
+    white-space: nowrap;
+}
+
+.jadwal-slot-cell {
+    background: #fff;
+}
+
+.jadwal-grid tbody tr:nth-child(even) .jadwal-slot-cell {
+    background: #edf2f8;
+}
+
+.jadwal-slot {
+    width: 26px;
+    height: 26px;
+    border-radius: 8px;
+    border: 2px solid #bfd0e6;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: transparent;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.jadwal-slot.is-booked {
+    border-color: #f48ceb;
+    background: #f9b2f6;
+    color: #08327b;
+}
+
+.table-reservasi {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 900px;
+    color: var(--staff-text);
+    font-family: 'Poppins', sans-serif;
+}
+
+.table-reservasi th,
+.table-reservasi td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #cfdae8;
+    text-align: left;
+    vertical-align: top;
+}
+
+.table-reservasi th {
+    background: var(--staff-navy);
+    color: #f5f9ff;
+    font-size: 17px;
+    font-weight: 700;
+    padding: 11px 12px;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.table-reservasi td {
+    font-size: 16px;
+}
+
+.table-reservasi tbody tr:nth-child(even) {
+    background: #edf2f8;
+}
+
+.table-reservasi tbody td[colspan] {
+    text-align: center;
+    color: var(--staff-muted);
+    padding: 16px 12px;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.status-pending {
+    background: #fff3cd;
+    color: #8a6d3b;
+}
+
+.status-confirmed {
+    background: #d4edda;
+    color: #2f6f3e;
+}
+
+.btn-small {
+    padding: 6px 10px;
+    font-size: 12px;
+    border-radius: 6px;
+}
+
+select,
+input,
+button {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+button {
+    cursor: pointer;
+    background: var(--pphc-blue);
+    color: #fff;
+    border: none;
+    font-weight: bold;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* Paksa tombol di konten admin memakai warna biru template */
+.content button,
+.content .btn-small {
+    background: var(--pphc-blue);
+    color: #fff;
+    border: none;
+}
+
+.content button:hover,
+.content .btn-small:hover {
+    background: #0a3a90;
+}
+
+/* Dropdown list style mengikuti layanan di dashboard */
+select {
+    background: #fff;
+    border: 1px solid #d2dbe7;
+    border-radius: 10px;
+    padding: 10px 12px;
+    font-size: 16px;
+    color: #111827;
+    appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, #6f8196 50%),
+        linear-gradient(135deg, #6f8196 50%, transparent 50%),
+        linear-gradient(to right, transparent, transparent);
+    background-position: calc(100% - 18px) calc(50% - 2px),
+        calc(100% - 13px) calc(50% - 2px),
+        100% 0;
+    background-size: 5px 5px, 5px 5px, 2.5em 2.5em;
+    background-repeat: no-repeat;
+    padding-right: 40px;
+}
+
+select:hover {
+    border-color: #fa7ff4;
+}
+
+select:focus {
+    outline: none;
+    border-color: #fa7ff4;
+    box-shadow: 0 0 0 3px rgba(250, 127, 244, 0.2);
+}
+
+select option {
+    background: #ffffff;
+    color: #111827;
+}
+
+select option {
+    padding: 10px;
+}
+
+select option:checked,
+select option:hover {
+    background: #fa7ff4;
+    color: #ffffff;
+}
+
+/* Custom select (untuk konsisten warna dropdown) */
+.pphc-select {
+    position: relative;
+    width: 100%;
+}
+
+.pphc-select-native {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.pphc-select-trigger {
+    width: 100%;
+    background: #fff;
+    border: 1px solid #d2dbe7;
+    border-radius: 10px;
+    padding: 10px 12px;
+    font-size: 16px;
+    color: #111827;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    text-align: left;
+}
+
+.pphc-select-trigger:hover {
+    border-color: #fa7ff4;
+}
+
+.pphc-select.is-open .pphc-select-trigger {
+    border-color: #fa7ff4;
+    box-shadow: 0 0 0 3px rgba(250, 127, 244, 0.2);
+}
+
+.pphc-select-caret {
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #6f8196;
+    flex-shrink: 0;
+}
+
+.pphc-select-options {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(100% + 6px);
+    background: #fff;
+    border: 1px solid #d2dbe7;
+    border-radius: 10px;
+    box-shadow: 0 12px 30px rgba(12, 21, 35, 0.18);
+    padding: 6px 0;
+    display: none;
+    z-index: 1200;
+    max-height: 240px;
+    overflow-y: auto;
+}
+
+.pphc-select.is-open .pphc-select-options {
+    display: block;
+}
+
+.pphc-select-option {
+    padding: 10px 12px;
+    font-size: 16px;
+    color: #111827;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.pphc-select-option:hover,
+.pphc-select-option.is-active {
+    background: #fa7ff4;
+    color: #ffffff;
+}
+
+.pphc-select-option.is-disabled {
+    color: #9aa4b2;
+    background: #f4f6f9;
+    cursor: not-allowed;
+}
+
+.pphc-select.is-disabled .pphc-select-trigger {
+    background: #f4f6f9;
+    color: #9aa4b2;
+    cursor: not-allowed;
+}
+
+@media(max-width:768px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+
+    .jadwal-filter {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Profil Admin Styles - Mirip psikolog.php */
+.profil-page {
+    margin-top: 8px;
+}
+
+.profil-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.profil-topbar h3 {
+    margin: 0;
+    color: #1c2f4f;
+    font-size: 24px;
+}
+
+.profil-identity-card {
+    background: #fff;
+    border: 1px solid #d7e0ee;
+    border-radius: 14px;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 14px;
+}
+
+.profil-identity-card img {
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profil-identity-card h4 {
+    margin: 0 0 6px 0;
+    color: #1f3554;
+    font-size: 20px;
+}
+
+.profil-identity-card p {
+    margin: 0 0 6px 0;
+    color: #425f86;
+    font-size: 15px;
+}
+
+.profil-identity-card span {
+    display: inline-block;
+    border: 1px solid #cfd9ea;
+    border-radius: 999px;
+    padding: 4px 12px;
+    color: #2f4669;
+    font-size: 16px;
+}
+
+.profil-stat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(140px, 1fr));
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.profil-stat-card {
+    background: #fff;
+    border: 1px solid #d7e0ee;
+    border-radius: 12px;
+    padding: 12px 14px;
+    text-align: center;
+}
+
+.profil-stat-card small {
+    display: block;
+    color: #5f7698;
+    margin-bottom: 4px;
+    font-size: 13px;
+}
+
+.profil-stat-card strong {
+    color: #1f3554;
+    font-size: 28px;
+}
+
+.profil-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.profil-card {
+    background: #fff;
+    border: 1px solid #d7e0ee;
+    border-radius: 12px;
+    padding: 16px;
+}
+
+.profil-card h4 {
+    margin-bottom: 12px;
+    color: #1c355b;
+    font-size: 18px;
+}
+
+.profil-field-grid {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 10px 12px;
+    align-items: center;
+}
+
+.profil-field-grid label {
+    color: #324b72;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.profil-value {
+    min-height: 40px;
+    border: 1px solid #e2e8f4;
+    background: #fafcff;
+    border-radius: 8px;
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+    color: #1f3554;
+    font-size: 14px;
+}
+
+@media (max-width: 1100px) {
+    .profil-stat-grid {
+        grid-template-columns: repeat(2, minmax(140px, 1fr));
+    }
+
+    .profil-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .profil-topbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .profil-stat-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profil-identity-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .profil-field-grid {
+        grid-template-columns: 1fr;
+        gap: 6px;
+    }
+}
